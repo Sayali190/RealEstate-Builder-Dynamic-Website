@@ -114,3 +114,4 @@ router.post("/logout", handleLogout);
 router.get("/me", handleGetMe);
 
 export { router as authRouter };
+export default router;

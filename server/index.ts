@@ -101,9 +101,11 @@ app.get("/api/users/me/properties", handleGetUserProperties);
 app.post("/api/contact", handleContact);
 
 // Start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+const PORT = Number(process.env.PORT) || 5000;
+
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Backend running on port ${PORT}`);
 });
+
 
 export default app;
