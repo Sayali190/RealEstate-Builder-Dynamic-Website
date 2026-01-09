@@ -18,8 +18,16 @@ export default function Login() {
     setError("");
     setLoading(true);
 
+    // try {
+    //   const res = await fetch("/api/auth/login", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({ email, password }),
+    //     credentials: "include",
+    //   });
+
     try {
-      const res = await fetch("/api/auth/login", {
+      const res = await fetch("http://13.60.81.243:5000/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

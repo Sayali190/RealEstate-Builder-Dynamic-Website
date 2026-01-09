@@ -11,7 +11,8 @@ export default function Index() {
   // Example of how to fetch data from the server (if needed)
   const fetchDemo = async () => {
     try {
-      const response = await fetch("/api/demo");
+      // const response = await fetch("/api/demo");
+      const response = await fetch("http://13.60.81.243:5000/api/demo");
       const data = (await response.json()) as DemoResponse;
       setExampleFromServer(data.message);
     } catch (error) {

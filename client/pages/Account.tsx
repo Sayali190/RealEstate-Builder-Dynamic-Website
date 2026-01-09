@@ -38,7 +38,8 @@ export default function Account() {
       setLoading(true);
 
       // Fetch user info
-      const userRes = await fetch("/api/auth/me", {
+      // const userRes = await fetch("/api/auth/me", {
+      const userRes = await fetch("http://13.60.81.243:5000/api/auth/me", {
         credentials: "include",
       });
 

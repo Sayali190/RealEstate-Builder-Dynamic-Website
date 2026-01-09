@@ -38,7 +38,8 @@ export default function PropertyDetail() {
   const fetchProperty = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`/api/properties/${id}`);
+      // const res = await fetch(`/api/properties/${id}`);
+      const res = await fetch(`http://13.60.81.243:5000/api/properties/${id}`);
       if (res.ok) {
         const data = await res.json();
         setProperty(data);

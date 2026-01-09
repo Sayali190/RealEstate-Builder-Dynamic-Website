@@ -26,8 +26,16 @@ export default function Signup() {
 
     setLoading(true);
 
+    // try {
+    //   const res = await fetch("/api/auth/signup", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({ name, email, password }),
+    //     credentials: "include",
+    //   });
+
     try {
-      const res = await fetch("/api/auth/signup", {
+      const res = await fetch("http://13.60.81.243:5000/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),

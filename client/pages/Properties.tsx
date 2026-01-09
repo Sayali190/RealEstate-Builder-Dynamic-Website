@@ -52,7 +52,8 @@ export default function Properties() {
       if (minPrice) params.append("minPrice", minPrice);
       if (maxPrice) params.append("maxPrice", maxPrice);
 
-      const res = await fetch(`/api/properties?${params.toString()}`);
+      //const res = await fetch(`/api/properties?${params.toString()}`);
+      const res = await fetch(`http://13.60.81.243:5000/api/properties?${params.toString()}`);
       if (res.ok) {
         const data = await res.json();
         setProperties(data.properties || []);

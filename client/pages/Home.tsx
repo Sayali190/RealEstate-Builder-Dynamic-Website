@@ -28,7 +28,8 @@ export default function Home() {
   const fetchProperties = async () => {
     try {
       setLoading(true);
-      const res = await fetch("/api/properties?limit=6");
+      // const res = await fetch("/api/properties?limit=6");
+      const res = await fetch("http://13.60.81.243:5000/api/properties?limit=6");
       if (res.ok) {
         const data = await res.json();
         setProperties(data.properties || []);
